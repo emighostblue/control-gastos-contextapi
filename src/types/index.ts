@@ -1,0 +1,20 @@
+type ValuePiece = Date | null
+export type Value = ValuePiece | [ValuePiece, ValuePiece]
+
+export type Expense = {
+    id: string
+    name: string
+    amount: number
+    category: string
+    date: Value
+}
+
+//DraftExpense has everything from Expense, but id
+export type DraftExpense = Omit<Expense, "id">
+
+
+export type Category = {
+    id: string
+    name: string
+    icon: string
+}
