@@ -10,7 +10,7 @@ import { useBudget } from "../hooks/useBudget.ts";
 
 export default function ExpenseForm() {
 
-    const {dispatch, state, expensedAmount, availableAmount} = useBudget()
+    const {dispatch, state, availableAmount} = useBudget()
 
     const [expense, setExpense] = useState<DraftExpense>({
         name: "",
